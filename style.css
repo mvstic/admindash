@@ -3,22 +3,35 @@
     padding: 0;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+.container > div {
+    border-style: solid;
+}
+
 .header {
-    border-style: solid 2px red;
+    background-color: red;
+    grid-column: 2 / 4;
 }
 
 .sidebar {
-    border-style: solid 2px blue;
+    background-color: blue;
+    grid-row: 1 / 4;
 }
 
 .projects {
-    border-style: solid 2px green;
+    background-color: yellow;
+    grid-row: 2 / 4;
 }
 
 .announcements {
-    border-style: solid 2px orange;
+    background-color: purple;
 }
 
 .trending {
-    border-style: solid 2px purple;
+    background-color: pink;
 }
