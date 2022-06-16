@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    border-style: solid 2px red;
+}
+
+.sidebar {
+    border-style: solid 2px blue;
+}
+
+.projects {
+    border-style: solid 2px green;
+}
+
+.announcements {
+    border-style: solid 2px orange;
+}
+
+.trending {
+    border-style: solid 2px purple;
+}
