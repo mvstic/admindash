@@ -2,6 +2,16 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -27,22 +37,26 @@ html, body {
 
 .userbuttons {
     grid-column: 2 span;
+    margin: auto;
+}
+
+form {
+    text-align: center;
 }
 
 .sidebar {
     background-color: peachpuff;
     grid-row: 1 / 4;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 40px 200px 1fr;
 }
 
 .logo {
-    justify-self: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 .projects {
-    background-color: grey;
+    background-color: rgb(212, 212, 212);
     grid-row: 2 / 4;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,7 +70,7 @@ html, body {
 }
 
 .announcements {
-    background-color: darkgrey;
+    background-color: rgb(212, 212, 212);
     display: grid;
     grid-template-rows: 25px 1fr 1fr 1fr;
     grid-gap: 15px;
@@ -72,11 +86,11 @@ html, body {
 }
 
 .trending {
-    background-color: lightgrey;
+    background-color: rgb(212, 212, 212);
     display: grid;
     grid-template-rows: 25px 1fr 1fr 1fr;
     grid-gap: 15px;
-    padding: 15px;
+    padding: 5px 15px 50px 15px;
 }
 
 .trending-card {
