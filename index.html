@@ -8,46 +8,55 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="grid">
+        <header>
             <div class="search">
                 <form>
                     <input type="text" id="search" title="search">
                 </form>
             </div>
-            <div class="greeting">Greetings</div>
-            <div class="notifs">Notif</div>
-            <div class="user">User</div>
-            <div class="userbuttons">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+            <div class="current-user">
+                <div class="notifs"><img src="../images/notif.svg"></div>
+                <div class="username">@user</div>
             </div>
-        </div>
-        <div class="sidebar">
+            <div class="hello-user">
+                <div class="hello">
+                    <p id="greetings">Greetings,</p>
+                    <p id="username">Gwendolyn Lavellan (@gvvn)</p>
+                </div>
+            </div>
+            <div class="submissions">
+                <div class="buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </header>
+        <aside>
             <div class="logo">Dashboard</div>
-                <div class="nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Messages</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Tasks</a></li>
-                        <li><a href="#">Communities</a></li>
-                    </ul>
-                </div>
-                <div class="support">
-                    <ul>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Communities</a></li>
+                </ul>
             </div>
-        <div class="main">
+            <div class="support">
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
             <div class="projects">
                 <div class="card">one</div>
                 <div class="card">two</div>
@@ -65,10 +74,12 @@
             <div class="trending">
                 <p>Trending</p>
                 <div class="trending-card">Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
+                <hr>
                 <div class="trending-card">Sed est sapien, ornare eu dui vel, blandit feugiat tortor.</div>
+                <hr>
                 <div class="trending-card"> Vivamus ac interdum magna, sed fringilla magna. </div>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 </html>

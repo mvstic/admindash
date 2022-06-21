@@ -3,72 +3,99 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Nunito', sans-serif;
-    background-color: (212, 212, 212)
+    background-color: rgb(212, 212, 212);
 }
 
-ul {
-    list-style-type: none;
-    padding: 30px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
+.grid {
     display: grid;
     grid-template-columns: 1fr 4fr 2fr;
     height: 100%;
 }
 
-.header {
+header {
     background-color: white;
+    box-shadow: 0px 0px 5px rgb(158, 158, 158); 
+    margin-bottom: 20px;
     grid-column: 2 / 4;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 5px rgb(158, 158, 158); 
-
-}
-
-/* .header > div {
-    border: solid;
-} */
-
-.greeting {
-    grid-row: 2 / 3;
-    padding: 30px;
-}
-
-.notifs {
-    margin: auto;
-}
-
-.user {
-    margin: auto;
-}
-
-.userbuttons {
-    grid-column: 2 span;
-    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "form user"
+        "hello-user submissions"
 }
 
 form {
+    grid-area: form;
     text-align: center;
     padding: 20px;
     margin: auto;
 }
 
 input {
-    width: 100%;
+    width: 80%;
     padding: 5px;
     border: 0;
     border-radius: 3px;
     box-shadow:0 0 2px 2px rgba(0,0,0,0.06);
 }
 
-.sidebar {
-    background-color: rgb(185, 185, 185);
+.current-user {
+    grid-area: user;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hello-user {
+    grid-area: hello-user;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.hello-user:before {
+    content: url("../images/sun.svg");
+}
+
+#greetings {
+    font-size: 0.8rem;
+    margin: 20px 0px 0px 0px;
+}
+
+#username {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0px;
+}
+
+.submissions {
+    grid-area: submissions;
+    display: flex;
+    flex-flow: row;
+    align-self: center;
+    justify-self: center;
+    gap: 10px;
+    max-height: 25%;
+}
+
+button {
+    background-color: rgb(84,186,217);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(130, 211, 235);
+    transition: 0.8s;
+}
+
+aside {
+    background-color: rgb(84,186,217);
     grid-row: 1 / 4;
     display: grid;
     grid-template-rows: 40px 200px 1fr;
@@ -78,7 +105,7 @@ input {
     padding: 30px;
 }
 
-.main {
+main {
     grid-column: 2 / 4;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -126,4 +153,20 @@ input {
 
 .trending-card {
     background-color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(61, 104, 119);
+}
+
+a:hover {
+    color: white;
+    transition: 0.5s;
 }
